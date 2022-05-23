@@ -11,10 +11,11 @@ app.use(express.static("public"));
 //   });
 // });
 
-app.get("/users/:id", async (req, res) => {
+app.get("/api/users/:id", async (req, res) => {
 	try {
 		// const client = await pool.connect();
-		const result = await pool.query('SELECT * FROM USER order by id');
+		const result = await pool.query('SELECT * FROM userinfo WHERE id = $1',[req.params.id]);
+
 		res.send(result.rows);
 		// client.release();
 	} catch (err) {

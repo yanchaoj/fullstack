@@ -1,0 +1,11 @@
+DROP DATABASE IF EXISTS todolist;
+
+CREATE DATABASE todolist;
+
+DROP TABLE IF EXISTS user;
+
+CREATE TABLE user(
+   id SERIAL PRIMARY KEY NOT NULL,
+   month VARCHAR(50),
+   task VARCHAR(50)
+);

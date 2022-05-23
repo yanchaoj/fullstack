@@ -1,0 +1,21 @@
+INSERT INTO USER (id,month,task) VALUES (1,'May', 'finish finals');
+INSERT INTO USER (id,month,task) VALUES (2,'May', 'write report');
+INSERT INTO USER (id,month,task) VALUES (3,'May', 'reading');
+INSERT INTO USER (id,month,task) VALUES (4,'May', 'review for the assessment');
+INSERT INTO USER (id,month,task) VALUES (5,'May', 'work out');
+INSERT INTO USER (id,month,task) VALUES (6,'May', 'meeting');
+INSERT INTO USER (id,month,task) VALUES (7,'May', 'gorecery shopping');
+INSERT INTO USER (id,month,task) VALUES (8,'May', 'check out the cars');
+INSERT INTO USER (id,month,task) VALUES (9,'May', 'house cleaning');
+INSERT INTO USER (id,month,task) VALUES (10,'May', 'take kids outside play');
+
+INSERT INTO USER (id,month,task) VALUES (1,'June', 'write journal');
+INSERT INTO USER (id,month,task) VALUES (2,'June', 'play game');
+INSERT INTO USER (id,month,task) VALUES (3,'June', 'do laundry');
+INSERT INTO USER (id,month,task) VALUES (4,'June', 'do car wash');
+INSERT INTO USER (id,month,task) VALUES (5,'June', 'finish job application');
+INSERT INTO USER (id,month,task) VALUES (6,'June', 'do medical exam');
+INSERT INTO USER (id,month,task) VALUES (7,'June', 'finish outprocessing');
+INSERT INTO USER (id,month,task) VALUES (8,'June', 'finish project');
+INSERT INTO USER (id,month,task) VALUES (9,'June', 'daily routine');
+INSERT INTO USER (id,month,task) VALUES (10,'June', 'get a new car');

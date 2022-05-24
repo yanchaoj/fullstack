@@ -7,12 +7,12 @@
   border-radius: 20px;
   text-align: center;
   padding: 20px;
-  color: rgb(132, 64, 193);
+ 
 }
 
 body {
-    position: absolute;
-    top: 80px;
+   
+    top: 50%;
     background-image: url('background.jpeg'); 
     background-position: center center;
     background-repeat: no-repeat;
@@ -28,7 +28,7 @@ body {
 
 
   #results {
-    position: absolute;
+    
     width: 700px;
     background-color: rgb(152, 199, 223);  
     color:white;

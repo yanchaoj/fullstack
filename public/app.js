@@ -21,15 +21,13 @@ function userinput() {
                 var span = document.createElement('span');
                 var username = document.createElement('div')
                 username.classname = "name";
-                username.textContent = current[0].name;
+                username.textContent = current.name;
                 console.log(username);
                 span.append(username);
 
-
-
                 var task = document.createElement('div')
                 task.classname = "taskcontent";
-                task.textContent = current[0].task;
+                task.textContent = current.task;
                 console.log(task);
                 span.append(task);
                 

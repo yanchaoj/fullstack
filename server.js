@@ -16,9 +16,8 @@ app.get("/api/users", async (req, res) => {
 	try {
 		
 		const result = await pool.query('SELECT * FROM userinfo')
-		// WHERE id = $1',[req.params.id]);
-
-		res.json(result.rows);
+		
+     	res.json(result.rows);
 	
 	} catch (err) {
 		console.error(err);
@@ -30,7 +29,7 @@ app.get("/api/users", async (req, res) => {
 app.get("/api/users/:name", async (req, res) => {
 	try {
 		
-		const result = await pool.query('SELECT * FROM userinfo', WHERE (name= '$1',[req.params.name]));
+		const result = await pool.query('SELECT * FROM userinfo', WHERE (name= '$1'),[req.params.name]);
 
 		res.json(result.rows);
 	

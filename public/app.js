@@ -7,7 +7,7 @@ function userinput() {
     $.get(`https://hidden-bastion-86690.herokuapp.com/api/users?q=${inputText}`, function (data) {
         console.log(data)
         if (inputText === "") {
-            alert("Please enter a userID!");
+            alert("Please enter your name!");
         }
         else {
 

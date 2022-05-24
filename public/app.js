@@ -10,7 +10,7 @@ function userinput() {
         if (inputText === "") {
             alert("Please enter your name!");
         }
-        else if (!data.include(inputText))
+        else if (data.include(inputText)===false)
              {
                 alert("User doesn't exist!");
              }

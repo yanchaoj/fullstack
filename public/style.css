@@ -1,3 +1,13 @@
+
+body {
+    /* background-image: url(../background.jpg); */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+   
+  }
+  
 #main {
     width: 800px;
     font-family: "Arima Madurai", cursive;
@@ -9,7 +19,7 @@
     padding: 20px;
     color: rgb(182, 226, 244);
   }
-  
+
   #results {
     width: 700px;
     background-color: rgb(123, 186, 161);  

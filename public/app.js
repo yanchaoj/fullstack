@@ -33,8 +33,7 @@ function userinput() {
                 span.append(task);
                 
                 results.append(span);
-                   
-                body.append(results);
+             
 
             }
         }

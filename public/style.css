@@ -1,4 +1,15 @@
 
+#main {
+  width: 800px;
+  font-size: 40px;
+  opacity: 80%;
+  margin: auto;
+  border-radius: 20px;
+  text-align: center;
+  padding: 20px;
+  color: rgb(132, 64, 193);
+}
+
 body {
     background-image: url('background.jpeg'); 
     background-position: center center;
@@ -7,28 +18,18 @@ body {
     background-size: cover;
     text-align: center;
     justify-content: center;
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 50px;
+   
   }
   
-#main {
-    width: 800px;
-    font-size: 40px;
-    opacity: 80%;
-    margin: auto;
-    border-radius: 20px;
-    text-align: center;
-    padding: 20px;
-    color: rgb(132, 64, 193);
-  }
+
 
   #results {
     width: 700px;
     background-color: rgb(152, 199, 223);  
     margin: auto;
-    margin-top: 30px;
-    border-radius: 20px;
+    margin-top: 50px;
+    border-radius: 10px;
     padding: 20px;
     text-align: center;
     justify-content: center;

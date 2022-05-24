@@ -4,7 +4,7 @@ searchBtn.addEventListener("click", userinput)
 function userinput() {
     const inputText = document.querySelector('input').value;
     console.log(inputText)
-    $.get(`https://localhost:5432/api/users`, function (data) {
+     $.get(`https://hidden-bastion-86690.herokuapp.com/api/users`, function (data) {
         console.log(data)
         if (inputText === "") {
             alert("Please enter your name!");

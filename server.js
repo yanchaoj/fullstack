@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const pool = require("./db/conn");
 const app = express();
-const port=5432;
+const port=3000;
 
 app.use(express.static("public"));
 
@@ -15,8 +15,22 @@ app.use(express.static("public"));
 app.get("/api/users", async (req, res) => {
 	try {
 		
-		const result = await pool.query('SELECT * FROM userinfo'); 
-		//  WHERE id = $1',[req.params.id]);
+		const result = await pool.query('SELECT * FROM userinfo')
+		// WHERE id = $1',[req.params.id]);
+
+		res.json(result.rows);
+	
+	} catch (err) {
+		console.error(err);
+		res.send("Error " + err);
+	}
+
+});
+
+app.get("/api/users/:name", async (req, res) => {
+	try {
+		
+		const result = await pool.query('SELECT * FROM userinfo', WHERE (name= '$1',[req.params.name]));
 
 		res.json(result.rows);
 	

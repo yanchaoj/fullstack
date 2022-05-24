@@ -4,8 +4,10 @@
 
 -- DROP TABLE IF EXISTS USER;
 
+\DROP TABLE IF EXISTS userinfo;
+
 CREATE TABLE userinfo(
    id SERIAL PRIMARY KEY NOT NULL,
-   month VARCHAR(50),
+   name VARCHAR(50),
    task VARCHAR(50)
 );

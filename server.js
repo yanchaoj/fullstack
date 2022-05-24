@@ -16,7 +16,7 @@ app.get("/api/users/:id", async (req, res) => {
 		// const client = await pool.connect();
 		const result = await pool.query('SELECT * FROM userinfo WHERE id = $1',[req.params.id]);
 
-		res.json(result.rows[0]);
+		res.json(result.rows[0].task);
 		// client.release();
 	} catch (err) {
 		console.error(err);

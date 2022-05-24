@@ -1,7 +1,7 @@
 
 #main {
   width: 800px;
-  font-size: 40px;
+  font-size: 60px;
   opacity: 80%;
   margin: auto;
   border-radius: 20px;
@@ -18,20 +18,17 @@ body {
     background-attachment: fixed;
     background-size: cover;
 }
+
 h1 {
-    top: 50%;
+    top: 100px;
     text-align: center;
     justify-content: center;
     font-size: large;
     color:plum;
+    text-align: center;
 }
     
    
- 
-  
-
-
-
   #results {
     
     width: 700px;

@@ -12,19 +12,24 @@
 
 body {
    
-    top: 50%;
     background-image: url('background.jpeg'); 
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+}
+h1 {
+    top: 50%;
     text-align: center;
     justify-content: center;
     font-size: large;
     color:plum;
+}
+    
    
-  }
+ 
   
+
 
 
   #results {

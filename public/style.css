@@ -1,0 +1,24 @@
+#main {
+    width: 800px;
+    font-family: "Arima Madurai", cursive;
+    font-size: 40px;
+    opacity: 80%;
+    margin: auto;
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+    color: rgb(182, 226, 244);
+  }
+  
+  #results {
+    width: 700px;
+    background-color: rgb(123, 186, 161);  
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  

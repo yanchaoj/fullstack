@@ -28,7 +28,8 @@ function userinput() {
                 task.classname = "taskcontent";
                 task.textContent = current.userino.task;
                 span.append(task);
-
+                
+                results.append(span);
 
 
             }

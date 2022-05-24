@@ -33,7 +33,7 @@ function userinput() {
                 
                 results.append(span);
                    
-
+                body.append(results);
 
             }
         }

@@ -10,10 +10,10 @@ function userinput() {
         if (inputText === "") {
             alert("Please enter your name!");
         }
-        else if (data.include(inputText)===false)
-             {
-                alert("User doesn't exist!");
-             }
+        // else if (data.include(inputText)===false)
+        //      {
+        //         alert("User doesn't exist!");
+        //      }
         else {
 
         var results = document.querySelector('#results');

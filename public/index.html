@@ -5,12 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Server</title>
     <script src="app.js"></script>
+    <title>Welcome to the To do List Home Page!</title>
+   
+
 </head>
 <body>
-    <h1>Home Page!</h1>
-    <h3>Navigate to "/users/:id" to test users route, and the Database</h3>
+    <h1> Please Enter Your UserID To See You Task!</h1> 
+    <h3> Navigate to "/api/users/:id" to see the task for each user</h3>
+   
+    <div id="user-section">
+        <input type="text" name='search'>
+        <button id="submit">Search</button>
+   </div>
+   <div id="results">
+        <span class="result">
+            <div class="name"></div>
+            <div class="task"></div>
 
-  
-
+        </span>
+    </div>
 </body>
 </html>

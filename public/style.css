@@ -17,16 +17,14 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-}
-
-h1 {
     top: 100px;
     text-align: center;
     justify-content: center;
     font-size: large;
     color:plum;
-    text-align: center;
+  
 }
+
     
    
   #results {

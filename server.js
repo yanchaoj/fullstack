@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const pool = require("./db/conn");
 const app = express();
+const port=5432;
 
 app.use(express.static("public"));
 

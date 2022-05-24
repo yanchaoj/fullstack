@@ -5,5 +5,8 @@ function userinput()
 {
     const inputText = document.querySelector('input').value;
     console.log(inputText)
-    
+    if (inputText === ""){
+        alert("Please input a userID!");
+      }
+
 }

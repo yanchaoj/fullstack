@@ -79,7 +79,7 @@ function deletetask(){
         task: oldtask
 
     }
-    console.log(newaccount)
+    console.log(oldaccount)
     fetch('https://hidden-bastion-86690.herokuapp.com/api/users/:name', {
         method: 'DELETE',
         headers: {'Content-Type': 'application/json'},

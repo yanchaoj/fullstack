@@ -18,8 +18,6 @@ function userinput() {
         results.innerHTML = "";
         for (var i = 0; i < data.length; i++) {
             var current = data[i];
-            console.log(current);
-
             var span = document.createElement('span');
 
             var username = document.createElement('div')

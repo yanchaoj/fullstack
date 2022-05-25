@@ -82,14 +82,14 @@ app.post("/api/users", async (req,res)=> {
 
 app.delete('/api/users/:name', async (req, res) =>{
     try{
-        const dataCheck = await pool.query(`SELECT * FROM userinfo WHERE name = '${req.params.name}';`);
-        if(dataCheck.rows.length === 0){
-            res.status(404).end('user doesn\'t exist, try again');
-            return undefined;
-        }
-        const data = await pool.query(`DELETE FROM userinfo WHERE name = ${req.params.name}`);
+        // const dataCheck = await pool.query(`SELECT * FROM userinfo WHERE name = '${req.params.name}';');
+        // if(dataCheck.rows.length === 0){
+        //     res.status(404).end('user doesn\'t exist, try again');
+        //     return undefined;
+        // }
+        const data = await pool.query(`DELETE FROM userinfo WHERE name = $`, [req.params.name]);
         console.log(data.rows);
-            res.send('task deleted!');
+        res.send('task deleted!');
     } catch(err){
         console.error(err.message);
         res.send('Error: ' + err.message);

@@ -73,7 +73,7 @@ app.patch('/api/user/:name', async (req, res) => {
     }
     console.log(usersObj);
     try{
-        await pool.query(`UPDATE users SET task = '${usersObj.task}' WHERE name = '${req.params.name}';`)
+        await pool.query(`UPDATE userinfo SET task = '${usersObj.task}' WHERE name = '${req.body.name}';`)
         res.send('user updated!')
     }catch(err){
         console.error(err);

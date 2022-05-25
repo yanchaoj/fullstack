@@ -47,7 +47,7 @@ function userinput() {
 createBtn.addEventListener("click", createtask)
 
 function createtask(){
-    const inputText2 = document.querySelector('input').value
+    const inputText2 = document.querySelector('input')[0].value
     console.log(inputText2)
     
 
@@ -55,6 +55,8 @@ function createtask(){
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(inputText2)
+
+        
     
 })
 }

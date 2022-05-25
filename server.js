@@ -5,6 +5,7 @@ const app = express();
 const port=3000;
 
 app.use(express.static("public"));
+app.use(express.json());
 
 // app.get("/api/students", (_, res) => {
 //   db.query("SELECT * FROM student").then((data) => {
@@ -40,11 +41,13 @@ app.get("/api/users/:name", async (req, res) => {
 
 });
 
+
 app.post("/api/users", async (req,res)=> {
 
 	try {
 		await pool.connect()
-		const result = await pool.query('INSERT INTO userinfo (name,task) VALUES ($1,$2)', [req.body.name, req.body.task]) 
+		const result = await pool.query('INSERT INTO userinfo (name,task) VALUES ($1,$2);', [req.body.name, req.body.task]) 
+	
 		res.json(result.rows);
 	}
 	    catch (err) {

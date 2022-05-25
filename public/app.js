@@ -47,7 +47,7 @@ function userinput() {
 createBtn.addEventListener("click", createtask)
 
 function createtask(){
-    const inputText2 = document.querySelector('input')[1].value
+    const inputText2 = document.querySelector('input').value
     console.log(inputText2)
     
 
@@ -58,5 +58,5 @@ function createtask(){
 
         
     
-})
+    })
 }

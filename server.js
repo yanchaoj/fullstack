@@ -41,8 +41,9 @@ app.get("/api/users/:name", async (req, res) => {
 });
 
 app.post("/api/users", async (req,res)=> {
+
 	try {
-		const result = await pool.query('INSERT INTO userinfo (name,task) VALUES ($1,$2)', [req.params.name, req.params.task]) 
+		const result = await pool.query('INSERT INTO userinfo (name,task) VALUES ($1,$2)', [req.body.name, req.body.task]) 
 		res.json(result.rows);
 	}
 	    catch (err) {

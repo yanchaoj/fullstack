@@ -47,13 +47,22 @@ function userinput() {
 createBtn.addEventListener("click", createtask)
 
 function createtask(){
-    const inputText2 = document.querySelector('#create').value
+
+   
+    const newuser = document.querySelector('#createuser').value
+    const newtask = document.querySelector('#createtask').value
+
+    let newaccount={
+        name: newuser,
+        task: newtask
+
+    }
   
 
     fetch('https://hidden-bastion-86690.herokuapp.com/api/users', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify(inputText2)
+        body: JSON.stringify(newaccount)
 
         
     

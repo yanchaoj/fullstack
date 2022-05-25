@@ -1,6 +1,6 @@
 const searchBtn = document.getElementById('submit')
 const createBtn = document.getElementById('create')
-const deletsBtn = document.getElementById('delete')
+const deleteBtn = document.getElementById('delete')
 
 searchBtn.addEventListener("click", userinput)
 function userinput() {

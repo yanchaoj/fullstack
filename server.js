@@ -80,6 +80,22 @@ app.patch('/api/user/:name', async (req, res) => {
 	}
 })
 
+app.delete('/api/users/:name', async (req, res) =>{
+    try{
+        const dataCheck = await pool.query(`SELECT * FROM userinfo WHERE name = '${req.body.name}';`);
+        if(dataCheck.rows.length === 0){
+            res.status(404).end('user doesn\'t exist, try again');
+            return undefined;
+        }
+        const data = await pool.query(`DELETE FROM userinfo WHERE name = ${req.body.name}`);
+        console.log(data.rows);
+            res.send('task deleted!');
+    } catch(err){
+        console.error(err.message);
+        res.send('Error: ' + err.message);
+    }
+})
+
 app.listen(process.env.PORT, () => {
   console.log(`listening on Port ${process.env.PORT}`);
   console.log(process.env.PORT,process.env.DATABASE_URL);

@@ -31,10 +31,9 @@ app.get("/api/users/:name", async (req, res) => {
 	try {
 		
 		const result = await pool.query('SELECT * FROM userinfo WHERE name= $1',[req.params.name]);
-		
+
 		if(result.rows.length === 0){
-            res.status(404).end('user doesn\'t exist, please create new user');
-            return undefined;
+            alert("user doesn't exit, please create a new user first!")
 		}
 	
 

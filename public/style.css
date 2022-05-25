@@ -17,7 +17,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    top: 100px;
+    margin-top: 200px;
     text-align: center;
     justify-content: center;
     font-size: large;
@@ -34,7 +34,7 @@ body {
     color:white;
     font-size: large;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 100px;
     border-radius: 10px;
     padding: 20px;
     text-align: center;

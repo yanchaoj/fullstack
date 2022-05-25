@@ -49,7 +49,7 @@ createBtn.addEventListener("click", createtask)
 function createtask(){
 
    
-    const newuser = document.querySelector('#createuser').value
+    const newuser = document.querySelector('#createuser').value.toUpperCase();
     const newtask = document.querySelector('#createtask').value
 
     console.log(newuser)

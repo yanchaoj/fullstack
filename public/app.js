@@ -67,23 +67,23 @@ function createtask(){
 }
 
 deleteBtn.addEventListener("click", deletetask)
-function deletstask(){
-    const newuser = document.querySelector('#createuser').value.toUpperCase();
-    const newtask = document.querySelector('#createtask').value
+function deletetask(){
+    const olduser = document.querySelector('#createuser').value.toUpperCase();
+    const oldtask = document.querySelector('#createtask').value
 
-    console.log(newuser)
-    console.log(newtask)
+    console.log(olduser)
+    console.log(oldtask)
 
-    let newaccount={
-        name: newuser,
-        task: newtask
+    let oldaccount={
+        name: olduser,
+        task: oldtask
 
     }
     console.log(newaccount)
     fetch('https://hidden-bastion-86690.herokuapp.com/api/users/:name', {
         method: 'DELETE',
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify(newaccount)
+        body: JSON.stringify(oldaccount)
     
     })
 

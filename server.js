@@ -87,7 +87,7 @@ app.delete('/api/users/:name', async (req, res) =>{
         //     res.status(404).end('user doesn\'t exist, try again');
         //     return undefined;
         // }
-        const data = await pool.query(`DELETE FROM userinfo WHERE name = $1`, [req.body.name]);
+        const data = await pool.query(`DELETE FROM userinfo WHERE name = $1 task = $2`, [req.body.name,req.body.task]);
         console.log(data.rows);
         res.send('task deleted!');
     } catch(err){

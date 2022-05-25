@@ -1,4 +1,5 @@
 const searchBtn = document.getElementById('submit')
+const createBtn = document.getElementById('create')
 
 searchBtn.addEventListener("click", userinput)
 
@@ -43,5 +44,17 @@ function userinput() {
 
 }
 
+createBtn.addEventListener("click", createtask)
 
+function createtask(){
+    const inputText2 = document.querySelector('input').value
+    console.log(inputText2)
+    
 
+    fetch('https://hidden-bastion-86690.herokuapp.com/api/users', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(inputText2)
+    
+})
+}

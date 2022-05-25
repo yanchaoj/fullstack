@@ -4,7 +4,7 @@ const createBtn = document.getElementById('create')
 searchBtn.addEventListener("click", userinput)
 
 function userinput() {
-    const inputText = document.querySelector('input').value.toUpperCase();
+    const inputText = document.getElementById('search').value.toUpperCase();
     console.log(inputText)
     $.get(`https://hidden-bastion-86690.herokuapp.com/api/users/${inputText}`, function (data) {
         console.log(data)
@@ -47,7 +47,7 @@ function userinput() {
 createBtn.addEventListener("click", createtask)
 
 function createtask(){
-    const inputText2 = document.querySelector('input').value
+    const inputText2 = document.getElementById('create').value
     console.log(inputText2)
     
 

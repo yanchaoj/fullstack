@@ -33,7 +33,8 @@ app.get("/api/users/:name", async (req, res) => {
 		const result = await pool.query('SELECT * FROM userinfo WHERE name= $1',[req.params.name]);
 
 		if(result.rows.length === 0){
-            res.send("user doesn't exit, please create a new user first!")
+            res.send("user doesn\'t exit, please create a new user first!")
+			return undefined;
 		}
 	
 

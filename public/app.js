@@ -52,11 +52,16 @@ function createtask(){
     const newuser = document.querySelector('#createuser').value
     const newtask = document.querySelector('#createtask').value
 
+    console.log(newuser)
+    console.log(newtask)
+
     let newaccount={
         name: newuser,
         task: newtask
 
     }
+
+    console.log(newaccount)
   
 
     fetch('https://hidden-bastion-86690.herokuapp.com/api/users', {

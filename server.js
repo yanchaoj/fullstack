@@ -56,6 +56,30 @@ app.post("/api/users", async (req,res)=> {
 	}
 });
 
+app.patch('/api/user/:name', async (req, res) => {
+    const index = req.body.name;
+    let data;
+    try{
+       data = await pool.query(`SELECT * FROM userinfo WHERE name = '${req.body.name}';`)
+       res.send(data.rows);
+    }catch (err){
+        console.error(err);
+    }
+	let reqObj = req.body;
+    let keys = Object.keys(reqObj);
+    let usersObj = data.rows[0];
+    for (let i = 0; i < keys.length; i++) {
+        usersObj[keys[i]] = reqObj[keys[i]];
+    }
+    console.log(usersObj);
+    try{
+        await pool.query(`UPDATE users SET task = '${usersObj.task}' WHERE name = '${req.params.name}';`)
+        res.send('user updated!')
+    }catch(err){
+        console.error(err);
+	}
+})
+
 app.listen(process.env.PORT, () => {
   console.log(`listening on Port ${process.env.PORT}`);
   console.log(process.env.PORT,process.env.DATABASE_URL);

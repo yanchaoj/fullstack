@@ -102,7 +102,7 @@ function updatetask(){
 
     }
     console.log(updateaccount)
-    fetch('https://hidden-bastion-86690.herokuapp.com/api/users/:name', {
+    fetch('https://hidden-bastion-86690.herokuapp.com/api/users', {
         method: 'PATCH',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(updateaccount)

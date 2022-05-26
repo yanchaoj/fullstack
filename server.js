@@ -62,7 +62,7 @@ app.post("/api/users", async (req,res)=> {
 	}
 });
 
-app.patch('/api/user/:id', async (req, res) => {
+app.patch('/api/users', async (req, res) => {
     const index = req.body.name;
     let data;
     try{

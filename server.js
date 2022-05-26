@@ -62,29 +62,29 @@ app.post("/api/users", async (req,res)=> {
 	}
 });
 
-// app.patch('/api/user/:name', async (req, res) => {
-//     const index = req.body.name;
-//     let data;
-//     try{
-//        data = await pool.query(`SELECT * FROM userinfo WHERE name = '${req.body.name}';`)
-//        res.send(data.rows);
-//     }catch (err){
-//         console.error(err);
-//     }
-// 	let reqObj = req.body;
-//     let keys = Object.keys(reqObj);
-//     let usersObj = data.rows[0];
-//     for (let i = 0; i < keys.length; i++) {
-//         usersObj[keys[i]] = reqObj[keys[i]];
-//     }
-//     console.log(usersObj);
-//     try{
-//         await pool.query(`UPDATE userinfo SET task = '${usersObj.task}' WHERE name = '${req.body.name}';`)
-//         res.send('user updated!')
-//     }catch(err){
-//         console.error(err);
-// 	}
-// })
+app.patch('/api/user/:name', async (req, res) => {
+    const index = req.body.name;
+    let data;
+    try{
+       data = await pool.query(`SELECT * FROM userinfo WHERE name = '${req.body.name}';`)
+       res.send(data.rows);
+    }catch (err){
+        console.error(err);
+    }
+	let reqObj = req.body;
+    let keys = Object.keys(reqObj);
+    let usersObj = data.rows[0];
+    for (let i = 0; i < keys.length; i++) {
+        usersObj[keys[i]] = reqObj[keys[i]];
+    }
+    console.log(usersObj);
+    try{
+        await pool.query(`UPDATE userinfo SET task = '${usersObj.task}' WHERE name = '${req.body.name}';`)
+        res.send('user updated!')
+    }catch(err){
+        console.error(err);
+	}
+})
 
 app.delete('/api/users/:name', async (req, res) =>{
     try{

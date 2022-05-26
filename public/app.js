@@ -1,6 +1,7 @@
 const searchBtn = document.getElementById('submit')
 const createBtn = document.getElementById('create')
 const deleteBtn = document.getElementById('delete')
+const updateBtn = document.getElementById('update')
 
 searchBtn.addEventListener("click", userinput)
 function userinput() {
@@ -84,5 +85,29 @@ function deletetask(){
         body: JSON.stringify(oldaccount)
     
     })
+
+}
+
+updateBtn.addEventListener("click", updatetask)
+function updatetask(){
+    const updateuser = document.querySelector('#createuser').value.toUpperCase();
+    const updatetask = document.querySelector('#createtask').value
+
+    console.log(updateuser)
+    console.log(updatetask)
+
+    let updateaccount={
+        name: updateuser,
+        task: updatetask
+
+    }
+    console.log(updateaccount)
+    fetch('https://hidden-bastion-86690.herokuapp.com/api/users/:name', {
+        method: 'PATCH',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(updateaccount)
+    
+    })
+
 
 }

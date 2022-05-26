@@ -66,11 +66,13 @@ app.patch('/api/user/:name', async (req, res) => {
     const index = req.body.name;
     let data;
     try{
-       data = await pool.query(`SELECT * FROM userinfo WHERE name = '${req.body.name}';`)
+       data = await pool.query(`DELETE FROM userinfo WHERE name = '${req.body.name}';`)
+	 
        res.send(data.rows);
     }catch (err){
         console.error(err);
     }
+	console.log(req.body)
 	let reqObj = req.body;
     let keys = Object.keys(reqObj);
     let usersObj = data.rows[0];

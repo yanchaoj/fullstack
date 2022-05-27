@@ -37,6 +37,7 @@ function userinput() {
             
             let updatebtn=document.createElement('button')
             updatebtn.textContent='update'
+            updatebtn.addEventListener("click",updatetask)
             span.appendChild(updatebtn)
             // const updateBtn = document.getElementById('update')
 
@@ -92,7 +93,7 @@ function deletetask(){
 
 }
 
-updatebtn.addEventListener("click", updatetask)
+
 function updatetask(){
     const updateuser = document.querySelector('#createuser').value.toUpperCase();
     const updatetask = document.querySelector('#createtask').value

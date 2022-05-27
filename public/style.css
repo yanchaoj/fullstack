@@ -26,7 +26,8 @@ body {
 }
 
   .span2{
-    border: 1px solid yellow;
+    border: 1px solid blue;
+    width:fit-content;
   }
    
   #results {

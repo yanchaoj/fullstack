@@ -66,7 +66,7 @@ app.patch('/api/users', async (req, res) => {
     const index = req.body.name;
     let data;
     try{
-       data = await pool.query(`UPDATE userinfo  SET task = '${req.body.task}' WHERE name = '${req.body.name}';`)
+       data = await pool.query(`UPDATE userinfo  SET task = '${req.body.task}' WHERE id = '${req.body.id}';`)
 	 
        res.send(data.rows);
     }catch (err){

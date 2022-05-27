@@ -19,8 +19,11 @@ function userinput() {
         results.innerHTML = "";
         for (var i = 0; i < data.length; i++) {
             var current = data[i];
+            let id=current.id;
+
             var span = document.createElement('div');
             span.classList.add('span2')
+            span.id=id;
             var username = document.createElement('div')
             username.classname = "name";
             username.textContent = current.name;
@@ -37,7 +40,9 @@ function userinput() {
             
             let updatebtn=document.createElement('button')
             updatebtn.textContent='update'
-            updatebtn.addEventListener("click",updatetask)
+            updatebtn.addEventListener("click",()=>{
+                updatetask(id)
+            })
             span.appendChild(updatebtn)
             // const updateBtn = document.getElementById('update')
 
@@ -94,7 +99,7 @@ function deletetask(){
 }
 
 
-function updatetask(){
+function updatetask(id){
     const updateuser = document.querySelector('#createuser').value.toUpperCase();
     const updatetask = document.querySelector('#createtask').value
 
@@ -102,6 +107,7 @@ function updatetask(){
     console.log(updatetask)
 
     let updateaccount={
+        id:id,
         name: updateuser,
         task: updatetask
 

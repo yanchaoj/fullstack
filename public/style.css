@@ -26,9 +26,9 @@ body {
 }
 
   .span2{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     width: 50%;
-    margin: 20%;
+    margin: auto;
     text-align: center;
 
   }

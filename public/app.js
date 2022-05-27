@@ -37,7 +37,7 @@ function userinput() {
             
             let updatebtn=document.createElement('button')
             updatebtn.textContent='update'
-            results.append(updatebtn)
+            results.appendChild(updatebtn)
             // const updateBtn = document.getElementById('update')
 
         }

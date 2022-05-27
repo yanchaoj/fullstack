@@ -1,7 +1,7 @@
 const searchBtn = document.getElementById('submit')
 const createBtn = document.getElementById('create')
 const deleteBtn = document.getElementById('delete')
-const updateBtn = document.getElementById('update')
+
 
 searchBtn.addEventListener("click", userinput)
 function userinput() {
@@ -34,7 +34,11 @@ function userinput() {
             span.append(task);
 
             results.append(span);
-
+            
+            let updatebtn=document.createElement('button')
+            updatebtn.textContent='update'
+            results.append(updatebtn)
+            // const updateBtn = document.getElementById('update')
 
         }
     }

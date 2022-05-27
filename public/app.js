@@ -92,7 +92,7 @@ function deletetask(){
 
 }
 
-updateBtn.addEventListener("click", updatetask)
+updatebtn.addEventListener("click", updatetask)
 function updatetask(){
     const updateuser = document.querySelector('#createuser').value.toUpperCase();
     const updatetask = document.querySelector('#createtask').value

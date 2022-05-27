@@ -20,7 +20,7 @@ function userinput() {
         for (var i = 0; i < data.length; i++) {
             var current = data[i];
             var span = document.createElement('span');
-
+            span.classList.add('span2')
             var username = document.createElement('div')
             username.classname = "name";
             username.textContent = current.name;

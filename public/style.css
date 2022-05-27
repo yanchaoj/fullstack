@@ -25,7 +25,9 @@ body {
   
 }
 
-    
+  .span2{
+    border: 1px solid yellow;
+  }
    
   #results {
     
